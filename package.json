@@ -2,10 +2,12 @@
   "name": "runtypes",
   "version": "5.0.1",
   "description": "Runtime validation for static types",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/cjs/index.d.ts",
   "scripts": {
-    "build": "tsc --pretty",
+    "build-cjs": "tsc --pretty",
+    "build-esm": "tsc -p tsconfig.esm.json --pretty",
     "format": "node scripts/format.js",
     "test": "jest $([ \"$CI\" = true ] && echo --coverage || echo --watch)",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
@@ -43,5 +45,7 @@
     },
     "testEnvironment": "node"
   },
-  "dependencies": {}
+  "dependencies": {
+    "tslib": "^2.0.1"
+  }
 }
