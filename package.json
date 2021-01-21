@@ -2,12 +2,40 @@
   "name": "runtypes",
   "version": "5.0.1",
   "description": "Runtime validation for static types",
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/cjs/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./async-contract": "./dist/asynccontract.js",
+    "./contract": "./dist/contract.js",
+    "./decorator": "./dist/decorator.js",
+    "./errors": "./dist/errors.js",
+    "./match": "./dist/match.js",
+    "./runtype": "./dist/runtype.js",
+    "./show": "./dist/show.js",
+    "./utils": "./dist/util.js",
+    "./array": "./dist/types/array.js",
+    "./boolean": "./dist/types/boolean.js",
+    "./brand": "./dist/types/brand.js",
+    "./constraint": "./dist/types/constraint.js",
+    "./dictionary": "./dist/types/dictionary.js",
+    "./function": "./dist/types/function.js",
+    "./instanceof": "./dist/types/instanceof.js",
+    "./intersect": "./dist/types/intersect.js",
+    "./lazy": "./dist/types/lazy.js",
+    "./literal": "./dist/types/literal.js",
+    "./never": "./dist/types/never.js",
+    "./number": "./dist/types/number.js",
+    "./record": "./dist/types/record.js",
+    "./string": "./dist/types/string.js",
+    "./symbol": "./dist/types/symbol.js",
+    "./tuple": "./dist/types/tuple.js",
+    "./union": "./dist/types/union.js",
+    "./unknown": "./dist/types/unknown.js"
+  },
+  "sideEffects": false,
+  "type": "module",
   "scripts": {
-    "build-cjs": "tsc --pretty",
-    "build-esm": "tsc -p tsconfig.esm.json --pretty",
+    "build": "tsc",
     "format": "node scripts/format.js",
     "test": "jest $([ \"$CI\" = true ] && echo --coverage || echo --watch)",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
@@ -44,8 +72,5 @@
       "\\.ts$": "ts-jest"
     },
     "testEnvironment": "node"
-  },
-  "dependencies": {
-    "tslib": "^2.0.1"
   }
 }
