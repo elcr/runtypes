@@ -1,4 +1,4 @@
-import { Literal, String, Number, match } from '.';
+import { Literal, String, Number, match } from './index.js';
 describe('match', () => {
     it('works', () => {
         const f = match([Literal(42), fortyTwo => fortyTwo / 2], [Number, n => n + 9], [String, s => s.length * 2]);

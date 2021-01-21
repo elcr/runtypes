@@ -1,4 +1,4 @@
-import { Runtype, Static, create } from '../runtype';
+import { Runtype, Static, create } from '../runtype.js';
 
 const RuntypeName = Symbol('RuntypeName');
 

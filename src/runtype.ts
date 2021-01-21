@@ -7,10 +7,10 @@ import {
   Constraint,
   ConstraintCheck,
   Brand,
-} from './index';
-import { Reflect } from './reflect';
-import show from './show';
-import { ValidationError } from './errors';
+} from './index.js';
+import { Reflect } from './reflect.js';
+import show from './show.js'
+import { ValidationError } from './errors.js';
 
 /**
  * A runtype determines at runtime whether a value conforms to a type specification.

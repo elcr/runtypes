@@ -1,4 +1,4 @@
-import { Runtype, Static, create, innerValidate } from '../runtype';
+import { Runtype, Static, create, innerValidate } from '../runtype.js';
 
 type ArrayStaticType<E extends Runtype, RO extends boolean> = RO extends true
   ? ReadonlyArray<Static<E>>

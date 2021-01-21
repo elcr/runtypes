@@ -1,5 +1,5 @@
-import { Result, Union2, Intersect2, Constraint, ConstraintCheck, Brand } from './index';
-import { Reflect } from './reflect';
+import { Result, Union2, Intersect2, Constraint, ConstraintCheck, Brand } from './index.js';
+import { Reflect } from './reflect.js';
 /**
  * A runtype determines at runtime whether a value conforms to a type specification.
  */

@@ -1,4 +1,4 @@
-import { Runtype } from '../runtype';
+import { Runtype } from '../runtype.js';
 /**
  * The super type of all literal types.
  */

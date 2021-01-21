@@ -1,4 +1,4 @@
-import { Runtype as Rt, Static } from '../runtype';
+import { Runtype as Rt, Static } from '../runtype.js';
 export interface Union1<A extends Rt> extends Rt<Static<A>> {
     tag: 'union';
     alternatives: [A];

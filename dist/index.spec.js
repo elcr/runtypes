@@ -1,5 +1,5 @@
-import { Unknown, Never, Undefined, Null, Void, Boolean, Number, String, Symbol as Sym, Literal, Array, Dictionary, Record, Partial as RTPartial, Tuple, Union, Intersect, Function, Lazy, Contract, InstanceOf, Guard, } from './index';
-import { ValidationError } from './errors';
+import { Unknown, Never, Undefined, Null, Void, Boolean, Number, String, Symbol as Sym, Literal, Array, Dictionary, Record, Partial as RTPartial, Tuple, Union, Intersect, Function, Lazy, Contract, InstanceOf, Guard, } from './index.js';
+import { ValidationError } from './errors.js';
 const boolTuple = Tuple(Boolean, Boolean, Boolean);
 const record1 = Record({ Boolean, Number });
 const union1 = Union(Literal(3), String, boolTuple, record1);

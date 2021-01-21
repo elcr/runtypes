@@ -1,4 +1,4 @@
-import { Reflect } from './index';
+import { Reflect } from './index.js';
 
 const show = (needsParens: boolean, circular: Set<Reflect>) => (refl: Reflect): string => {
   const parenthesize = (s: string) => (needsParens ? `(${s})` : s);
@@ -35,14 +35,14 @@ const show = (needsParens: boolean, circular: Set<Reflect>) => (refl: Reflect): 
         const keys = Object.keys(refl.fields);
         return keys.length
           ? `{ ${keys
-              .map(
-                k =>
-                  `${readonlyTag(refl)}${k}${partialTag(refl)}: ${show(
-                    false,
-                    circular,
-                  )(refl.fields[k])};`,
-              )
-              .join(' ')} }`
+            .map(
+              k =>
+                `${readonlyTag(refl)}${k}${partialTag(refl)}: ${show(
+                  false,
+                  circular,
+                )(refl.fields[k])};`,
+            )
+            .join(' ')} }`
           : '{}';
       }
       case 'tuple':

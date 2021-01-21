@@ -1,4 +1,4 @@
-import { Runtype, Static } from '../runtype';
+import { Runtype, Static } from '../runtype.js';
 declare const RuntypeName: unique symbol;
 export interface Brand<B extends string, A extends Runtype> extends Runtype<Static<A> & {
     [RuntypeName]: {

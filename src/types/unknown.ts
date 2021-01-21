@@ -1,4 +1,4 @@
-import { Runtype, create } from '../runtype';
+import { Runtype, create } from '../runtype.js';
 
 export interface Unknown extends Runtype {
   tag: 'unknown';

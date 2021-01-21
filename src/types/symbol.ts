@@ -1,4 +1,4 @@
-import { Runtype, create } from '../runtype';
+import { Runtype, create } from '../runtype.js';
 
 interface Sym extends Runtype<symbol> {
   tag: 'symbol';
@@ -12,9 +12,9 @@ const Sym = create<Sym>(
     typeof value === 'symbol'
       ? { success: true, value }
       : {
-          success: false,
-          message: `Expected symbol, but was ${value === null ? value : typeof value}`,
-        },
+        success: false,
+        message: `Expected symbol, but was ${value === null ? value : typeof value}`,
+      },
   { tag: 'symbol' },
 );
 

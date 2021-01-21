@@ -1,4 +1,4 @@
-import { Runtype as Rt, Case, Matcher10, Matcher9, Matcher8, Matcher7, Matcher6, Matcher5, Matcher4, Matcher3, Matcher1, Matcher2 } from '.';
+import { Runtype as Rt, Case, Matcher10, Matcher9, Matcher8, Matcher7, Matcher6, Matcher5, Matcher4, Matcher3, Matcher1, Matcher2 } from './index.js';
 export declare function match<A extends Rt, Z>(a: PairCase<A, Z>): Matcher1<A, Z>;
 export declare function match<A extends Rt, B extends Rt, Z>(a: PairCase<A, Z>, b: PairCase<B, Z>): Matcher2<A, B, Z>;
 export declare function match<A extends Rt, B extends Rt, C extends Rt, Z>(a: PairCase<A, Z>, b: PairCase<B, Z>, c: PairCase<C, Z>): Matcher3<A, B, C, Z>;

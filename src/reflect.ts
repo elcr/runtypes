@@ -1,7 +1,7 @@
-import { Runtype } from './runtype';
-import { LiteralBase } from './types/literal';
-import { ConstraintCheck } from './types/constraint';
-import { Constructor } from './types/instanceof';
+import { Runtype } from './runtype.js';
+import { LiteralBase } from './types/literal.js';
+import { ConstraintCheck } from './types/constraint.js';
+import { Constructor } from './types/instanceof.js';
 
 export type Reflect =
   | ({ tag: 'unknown' } & Runtype)
@@ -14,24 +14,24 @@ export type Reflect =
   | ({ tag: 'literal'; value: LiteralBase } & Runtype<LiteralBase>)
   | ({ tag: 'array'; element: Reflect; isReadonly: boolean } & Runtype<ReadonlyArray<unknown>>)
   | ({
-      tag: 'record';
-      fields: { [_: string]: Reflect };
-      isPartial: boolean;
-      isReadonly: boolean;
-    } & Runtype<{ readonly [_ in string]: unknown }>)
+    tag: 'record';
+    fields: { [_: string]: Reflect };
+    isPartial: boolean;
+    isReadonly: boolean;
+  } & Runtype<{ readonly [_ in string]: unknown }>)
   | ({ tag: 'dictionary'; key: 'string' | 'number'; value: Reflect } & Runtype<{
-      [_: string]: unknown;
-    }>)
+    [_: string]: unknown;
+  }>)
   | ({ tag: 'tuple'; components: Reflect[] } & Runtype<unknown[]>)
   | ({ tag: 'union'; alternatives: Reflect[] } & Runtype)
   | ({ tag: 'intersect'; intersectees: Reflect[] } & Runtype)
   | ({ tag: 'function' } & Runtype<(...args: any[]) => any>)
   | ({
-      tag: 'constraint';
-      underlying: Reflect;
-      constraint: ConstraintCheck<Runtype<never>>;
-      args?: any;
-      name?: string;
-    } & Runtype)
+    tag: 'constraint';
+    underlying: Reflect;
+    constraint: ConstraintCheck<Runtype<never>>;
+    args?: any;
+    name?: string;
+  } & Runtype)
   | ({ tag: 'instanceof'; ctor: Constructor<unknown> } & Runtype)
   | ({ tag: 'brand'; brand: string; entity: Reflect } & Runtype);

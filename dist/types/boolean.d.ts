@@ -1,4 +1,4 @@
-import { Runtype } from '../runtype';
+import { Runtype } from '../runtype.js';
 export interface Boolean extends Runtype<boolean> {
     tag: 'boolean';
 }

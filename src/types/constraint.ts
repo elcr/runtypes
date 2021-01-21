@@ -1,6 +1,6 @@
-import { Runtype, Static, create } from '../runtype';
-import { String } from './string';
-import { Unknown } from './unknown';
+import { Runtype, Static, create } from '../runtype.js';
+import { String } from './string.js';
+import { Unknown } from './unknown.js';
 
 export type ConstraintCheck<A extends Runtype> = (x: Static<A>) => boolean | string;
 

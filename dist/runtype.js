@@ -1,6 +1,6 @@
-import { Union, Intersect, Constraint, Brand, } from './index';
-import show from './show';
-import { ValidationError } from './errors';
+import { Union, Intersect, Constraint, Brand, } from './index.js';
+import show from './show.js';
+import { ValidationError } from './errors.js';
 export function create(validate, A) {
     A.check = check;
     A.assert = check;

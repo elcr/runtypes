@@ -1,4 +1,4 @@
-import { create } from '../runtype';
+import { create } from '../runtype.js';
 /**
  * Validates anything, but provides no new type information about it.
  */

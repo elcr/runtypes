@@ -1,5 +1,5 @@
-import { Runtype, create, Static, innerValidate } from '../runtype';
-import show from '../show';
+import { Runtype, create, Static, innerValidate } from '../runtype.js';
+import show from '../show.js';
 
 export interface StringDictionary<V extends Runtype> extends Runtype<{ [_: string]: Static<V> }> {
   tag: 'dictionary';

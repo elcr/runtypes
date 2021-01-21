@@ -1,4 +1,4 @@
-import { Runtype } from '../runtype';
+import { Runtype } from '../runtype.js';
 export interface Function extends Runtype<(...args: any[]) => any> {
     tag: 'function';
 }

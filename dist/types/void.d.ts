@@ -1,4 +1,4 @@
-import { Unknown } from './unknown';
+import { Unknown } from './unknown.js';
 export declare type Void = Unknown;
 /**
  * Void is an alias for Unknown

@@ -1,4 +1,4 @@
-import { Runtype } from '../runtype';
+import { Runtype } from '../runtype.js';
 export interface Constructor<V> {
     new (...args: any[]): V;
 }

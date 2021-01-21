@@ -1,4 +1,4 @@
-import { Union, String, Literal, Record, Number, InstanceOf } from '..';
+import { Union, String, Literal, Record, Number, InstanceOf } from '../index.js';
 
 const ThreeOrString = Union(Literal(3), String);
 

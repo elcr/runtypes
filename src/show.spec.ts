@@ -20,10 +20,10 @@ import {
   Lazy,
   InstanceOf,
   Reflect,
-} from '.';
-import show from './show';
+} from './index.js';
+import show from './show.js'
 
-class TestClass {}
+class TestClass { }
 
 const cases: [Reflect, string][] = [
   [Unknown, 'unknown'],

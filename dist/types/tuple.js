@@ -1,6 +1,6 @@
-import { create, innerValidate } from '../runtype';
-import { Array as Arr } from './array';
-import { Unknown } from './unknown';
+import { create, innerValidate } from '../runtype.js';
+import { Array as Arr } from './array.js';
+import { Unknown } from './unknown.js';
 export function Tuple(...components) {
     return create((x, visited) => {
         const validated = innerValidate(Arr(Unknown), x, visited);

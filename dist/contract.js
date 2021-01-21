@@ -1,4 +1,4 @@
-import { ValidationError } from './errors';
+import { ValidationError } from './errors.js';
 export function Contract(...runtypes) {
     const lastIndex = runtypes.length - 1;
     const argTypes = runtypes.slice(0, lastIndex);

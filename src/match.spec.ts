@@ -1,4 +1,4 @@
-import { Literal, String, Number, match } from '.';
+import { Literal, String, Number, match } from './index.js';
 
 describe('match', () => {
   it('works', () => {

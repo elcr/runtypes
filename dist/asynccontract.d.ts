@@ -1,4 +1,4 @@
-import { Runtype } from './index';
+import { Runtype } from './index.js';
 export interface AsyncContract0<Z> {
     enforce(f: () => Promise<Z>): () => Promise<Z>;
 }

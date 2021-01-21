@@ -1,4 +1,4 @@
-import { Runtype, create } from '../runtype';
+import { Runtype, create } from '../runtype.js';
 
 export interface Function extends Runtype<(...args: any[]) => any> {
   tag: 'function';
@@ -12,8 +12,8 @@ export const Function = create<Function>(
     typeof value === 'function'
       ? { success: true, value }
       : {
-          success: false,
-          message: `Expected function, but was ${value === null ? value : typeof value}`,
-        },
+        success: false,
+        message: `Expected function, but was ${value === null ? value : typeof value}`,
+      },
   { tag: 'function' },
 );

@@ -1,4 +1,4 @@
-import { create, innerValidate } from '../runtype';
+import { create, innerValidate } from '../runtype.js';
 export function Intersect(...intersectees) {
     return create((value, visited) => {
         for (const targetType of intersectees) {

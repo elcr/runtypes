@@ -1,7 +1,7 @@
-import { Runtype, create } from '../runtype';
+import { Runtype, create } from '../runtype.js';
 
 export interface Constructor<V> {
-  new (...args: any[]): V;
+  new(...args: any[]): V;
 }
 
 export interface InstanceOf<V> extends Runtype<V> {
@@ -15,11 +15,11 @@ export function InstanceOf<V>(ctor: Constructor<V>) {
       value instanceof ctor
         ? { success: true, value }
         : {
-            success: false,
-            message: `Expected ${(ctor as any).name}, but was ${
-              value === null ? value : typeof value
+          success: false,
+          message: `Expected ${(ctor as any).name}, but was ${
+            value === null ? value : typeof value
             }`,
-          },
+        },
     { tag: 'instanceof', ctor: ctor },
   );
 }

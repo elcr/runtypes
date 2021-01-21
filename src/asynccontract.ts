@@ -1,5 +1,5 @@
-import { Runtype } from './index';
-import { ValidationError } from './errors';
+import { Runtype } from './index.js';
+import { ValidationError } from './errors.js';
 
 export interface AsyncContract0<Z> {
   enforce(f: () => Promise<Z>): () => Promise<Z>;

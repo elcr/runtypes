@@ -1,4 +1,4 @@
-import { create } from '../runtype';
+import { create } from '../runtype.js';
 /**
  * Be aware of an Array of Symbols `[Symbol()]` which would throw "TypeError: Cannot convert a Symbol value to a string"
  */

@@ -1,4 +1,4 @@
-import { create } from '../runtype';
+import { create } from '../runtype.js';
 export function InstanceOf(ctor) {
     return create(value => value instanceof ctor
         ? { success: true, value }

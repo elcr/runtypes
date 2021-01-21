@@ -7,8 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { AsyncContract, Number } from '.';
-import { ValidationError } from './errors';
+import { AsyncContract, Number } from './index.js';
+import { ValidationError } from './errors.js';
 describe('AsyncContract', () => {
     describe('when function does not return a promise', () => {
         it('throws a validation error', () => {

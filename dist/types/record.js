@@ -1,6 +1,6 @@
-import { create, innerValidate } from '../runtype';
-import { hasKey } from '../util';
-import show from '../show';
+import { create, innerValidate } from '../runtype.js';
+import { hasKey } from '../util.js';
+import show from '../show.js';
 /**
  * Construct a record runtype from runtypes for its values.
  */

@@ -1,7 +1,7 @@
-import { Runtype } from './runtype';
-import { LiteralBase } from './types/literal';
-import { ConstraintCheck } from './types/constraint';
-import { Constructor } from './types/instanceof';
+import { Runtype } from './runtype.js';
+import { LiteralBase } from './types/literal.js';
+import { ConstraintCheck } from './types/constraint.js';
+import { Constructor } from './types/instanceof.js';
 export declare type Reflect = ({
     tag: 'unknown';
 } & Runtype) | ({

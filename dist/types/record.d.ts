@@ -1,4 +1,4 @@
-import { Runtype, Static } from '../runtype';
+import { Runtype, Static } from '../runtype.js';
 declare type RecordStaticType<O extends {
     [_: string]: Runtype;
 }, Part extends boolean, RO extends boolean> = Part extends true ? RO extends true ? {

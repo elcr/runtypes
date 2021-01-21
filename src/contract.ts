@@ -1,5 +1,5 @@
-import { Runtype } from './index';
-import { ValidationError } from './errors';
+import { Runtype } from './index.js';
+import { ValidationError } from './errors.js';
 
 export interface Contract0<Z> {
   enforce(f: () => Z): () => Z;

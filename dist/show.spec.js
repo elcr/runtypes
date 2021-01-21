@@ -1,5 +1,5 @@
-import { Unknown, Never, Undefined, Null, Void, Boolean, Number, String, Symbol, Literal, Array, Dictionary, Record, Partial, Tuple, Union, Intersect, Function, Lazy, InstanceOf, } from '.';
-import show from './show';
+import { Unknown, Never, Undefined, Null, Void, Boolean, Number, String, Symbol, Literal, Array, Dictionary, Record, Partial, Tuple, Union, Intersect, Function, Lazy, InstanceOf, } from './index.js';
+import show from './show.js';
 class TestClass {
 }
 const cases = [

@@ -1,4 +1,4 @@
-import { Runtype, Static } from '../runtype';
+import { Runtype, Static } from '../runtype.js';
 export interface StringDictionary<V extends Runtype> extends Runtype<{
     [_: string]: Static<V>;
 }> {

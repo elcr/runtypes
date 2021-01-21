@@ -1,4 +1,4 @@
-import { Runtype } from '../runtype';
+import { Runtype } from '../runtype.js';
 /**
  * Construct a possibly-recursive Runtype.
  */

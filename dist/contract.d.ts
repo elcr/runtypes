@@ -1,4 +1,4 @@
-import { Runtype } from './index';
+import { Runtype } from './index.js';
 export interface Contract0<Z> {
     enforce(f: () => Z): () => Z;
 }

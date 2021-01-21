@@ -1,4 +1,4 @@
-import { create } from '../runtype';
+import { create } from '../runtype.js';
 const RuntypeName = Symbol('RuntypeName');
 export function Brand(brand, entity) {
     return create(value => {

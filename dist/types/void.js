@@ -1,4 +1,4 @@
-import { Unknown } from './unknown';
+import { Unknown } from './unknown.js';
 /**
  * Void is an alias for Unknown
  *

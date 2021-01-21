@@ -1,4 +1,4 @@
-import { create, innerValidate } from '../runtype';
+import { create, innerValidate } from '../runtype.js';
 /**
  * Construct an array runtype from a runtype for its elements.
  */

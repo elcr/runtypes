@@ -1,7 +1,7 @@
-import { Runtype as Rt, Static, create, innerValidate } from '../runtype';
-import show from '../show';
-import { LiteralBase } from './literal';
-import { hasKey } from '../util';
+import { Runtype as Rt, Static, create, innerValidate } from '../runtype.js';
+import show from '../show.js';
+import { LiteralBase } from './literal.js';
+import { hasKey } from '../util.js';
 
 export interface Union1<A extends Rt> extends Rt<Static<A>> {
   tag: 'union';
@@ -43,7 +43,7 @@ export interface Union6<
   D extends Rt,
   E extends Rt,
   F extends Rt
-> extends Rt<Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F>> {
+  > extends Rt<Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F>> {
   tag: 'union';
   alternatives: [A, B, C, D, E, F];
   match: Match6<A, B, C, D, E, F>;
@@ -57,7 +57,7 @@ export interface Union7<
   E extends Rt,
   F extends Rt,
   G extends Rt
-> extends Rt<Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F> | Static<G>> {
+  > extends Rt<Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F> | Static<G>> {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G];
   match: Match7<A, B, C, D, E, F, G>;
@@ -72,9 +72,9 @@ export interface Union8<
   F extends Rt,
   G extends Rt,
   H extends Rt
->
+  >
   extends Rt<
-    Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F> | Static<G> | Static<H>
+  Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F> | Static<G> | Static<H>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H];
@@ -91,17 +91,17 @@ export interface Union9<
   G extends Rt,
   H extends Rt,
   I extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I];
@@ -119,18 +119,18 @@ export interface Union10<
   H extends Rt,
   I extends Rt,
   J extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J];
@@ -149,19 +149,19 @@ export interface Union11<
   I extends Rt,
   J extends Rt,
   K extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
+  | Static<K>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J, K];
@@ -181,20 +181,20 @@ export interface Union12<
   J extends Rt,
   K extends Rt,
   L extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
+  | Static<K>
+  | Static<L>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J, K, L];
@@ -215,21 +215,21 @@ export interface Union13<
   K extends Rt,
   L extends Rt,
   M extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
+  | Static<K>
+  | Static<L>
+  | Static<M>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J, K, L, M];
@@ -251,22 +251,22 @@ export interface Union14<
   L extends Rt,
   M extends Rt,
   N extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
+  | Static<K>
+  | Static<L>
+  | Static<M>
+  | Static<N>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J, K, L, M, N];
@@ -289,23 +289,23 @@ export interface Union15<
   M extends Rt,
   N extends Rt,
   O extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
+  | Static<K>
+  | Static<L>
+  | Static<M>
+  | Static<N>
+  | Static<O>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O];
@@ -329,24 +329,24 @@ export interface Union16<
   N extends Rt,
   O extends Rt,
   P extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
-    | Static<P>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
+  | Static<K>
+  | Static<L>
+  | Static<M>
+  | Static<N>
+  | Static<O>
+  | Static<P>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P];
@@ -371,25 +371,25 @@ export interface Union17<
   O extends Rt,
   P extends Rt,
   Q extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
-    | Static<P>
-    | Static<Q>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
+  | Static<K>
+  | Static<L>
+  | Static<M>
+  | Static<N>
+  | Static<O>
+  | Static<P>
+  | Static<Q>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q];
@@ -415,26 +415,26 @@ export interface Union18<
   P extends Rt,
   Q extends Rt,
   R extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
-    | Static<P>
-    | Static<Q>
-    | Static<R>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
+  | Static<K>
+  | Static<L>
+  | Static<M>
+  | Static<N>
+  | Static<O>
+  | Static<P>
+  | Static<Q>
+  | Static<R>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R];
@@ -461,27 +461,27 @@ export interface Union19<
   Q extends Rt,
   R extends Rt,
   S extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
-    | Static<P>
-    | Static<Q>
-    | Static<R>
-    | Static<S>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
+  | Static<K>
+  | Static<L>
+  | Static<M>
+  | Static<N>
+  | Static<O>
+  | Static<P>
+  | Static<Q>
+  | Static<R>
+  | Static<S>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S];
@@ -509,28 +509,28 @@ export interface Union20<
   R extends Rt,
   S extends Rt,
   T extends Rt
->
+  >
   extends Rt<
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
-    | Static<P>
-    | Static<Q>
-    | Static<R>
-    | Static<S>
-    | Static<T>
+  | Static<A>
+  | Static<B>
+  | Static<C>
+  | Static<D>
+  | Static<E>
+  | Static<F>
+  | Static<G>
+  | Static<H>
+  | Static<I>
+  | Static<J>
+  | Static<K>
+  | Static<L>
+  | Static<M>
+  | Static<N>
+  | Static<O>
+  | Static<P>
+  | Static<Q>
+  | Static<R>
+  | Static<S>
+  | Static<T>
   > {
   tag: 'union';
   alternatives: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T];
@@ -1048,7 +1048,7 @@ export interface Match6<
   D extends Rt,
   E extends Rt,
   F extends Rt
-> {
+  > {
   <Z>(
     a: Case<A, Z>,
     b: Case<B, Z>,
@@ -1066,7 +1066,7 @@ export interface Match7<
   E extends Rt,
   F extends Rt,
   G extends Rt
-> {
+  > {
   <Z>(
     a: Case<A, Z>,
     b: Case<B, Z>,
@@ -1086,7 +1086,7 @@ export interface Match8<
   F extends Rt,
   G extends Rt,
   H extends Rt
-> {
+  > {
   <Z>(
     a: Case<A, Z>,
     b: Case<B, Z>,
@@ -1108,7 +1108,7 @@ export interface Match9<
   G extends Rt,
   H extends Rt,
   I extends Rt
-> {
+  > {
   <Z>(
     a: Case<A, Z>,
     b: Case<B, Z>,
@@ -1132,7 +1132,7 @@ export interface Match10<
   H extends Rt,
   I extends Rt,
   J extends Rt
-> {
+  > {
   <Z>(
     a: Case<A, Z>,
     b: Case<B, Z>,
@@ -1158,7 +1158,7 @@ export interface Match11<
   I extends Rt,
   J extends Rt,
   K extends Rt
-> {
+  > {
   <Z>(
     a: Case<A, Z>,
     b: Case<B, Z>,
@@ -1187,7 +1187,7 @@ export interface Match12<
   J extends Rt,
   K extends Rt,
   L extends Rt
-> {
+  > {
   <Z>(
     A: Case<A, Z>,
     B: Case<B, Z>,
@@ -1218,7 +1218,7 @@ export interface Match13<
   K extends Rt,
   L extends Rt,
   M extends Rt
-> {
+  > {
   <Z>(
     A: Case<A, Z>,
     B: Case<B, Z>,
@@ -1251,7 +1251,7 @@ export interface Match14<
   L extends Rt,
   M extends Rt,
   N extends Rt
-> {
+  > {
   <Z>(
     A: Case<A, Z>,
     B: Case<B, Z>,
@@ -1286,7 +1286,7 @@ export interface Match15<
   M extends Rt,
   N extends Rt,
   O extends Rt
-> {
+  > {
   <Z>(
     A: Case<A, Z>,
     B: Case<B, Z>,
@@ -1323,7 +1323,7 @@ export interface Match16<
   N extends Rt,
   O extends Rt,
   P extends Rt
-> {
+  > {
   <Z>(
     A: Case<A, Z>,
     B: Case<B, Z>,
@@ -1362,7 +1362,7 @@ export interface Match17<
   O extends Rt,
   P extends Rt,
   Q extends Rt
-> {
+  > {
   <Z>(
     A: Case<A, Z>,
     B: Case<B, Z>,
@@ -1403,7 +1403,7 @@ export interface Match18<
   P extends Rt,
   Q extends Rt,
   R extends Rt
-> {
+  > {
   <Z>(
     A: Case<A, Z>,
     B: Case<B, Z>,
@@ -1446,7 +1446,7 @@ export interface Match19<
   Q extends Rt,
   R extends Rt,
   S extends Rt
-> {
+  > {
   <Z>(
     A: Case<A, Z>,
     B: Case<B, Z>,
@@ -1491,7 +1491,7 @@ export interface Match20<
   R extends Rt,
   S extends Rt,
   T extends Rt
-> {
+  > {
   <Z>(
     A: Case<A, Z>,
     B: Case<B, Z>,
@@ -1537,7 +1537,7 @@ export type Matcher6<
   E extends Rt,
   F extends Rt,
   Z
-> = (x: Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F>) => Z;
+  > = (x: Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F>) => Z;
 export type Matcher7<
   A extends Rt,
   B extends Rt,
@@ -1547,7 +1547,7 @@ export type Matcher7<
   F extends Rt,
   G extends Rt,
   Z
-> = (x: Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F> | Static<G>) => Z;
+  > = (x: Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F> | Static<G>) => Z;
 export type Matcher8<
   A extends Rt,
   B extends Rt,
@@ -1558,9 +1558,9 @@ export type Matcher8<
   G extends Rt,
   H extends Rt,
   Z
-> = (
-  x: Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F> | Static<G> | Static<H>,
-) => Z;
+  > = (
+    x: Static<A> | Static<B> | Static<C> | Static<D> | Static<E> | Static<F> | Static<G> | Static<H>,
+  ) => Z;
 export type Matcher9<
   A extends Rt,
   B extends Rt,
@@ -1572,18 +1572,18 @@ export type Matcher9<
   H extends Rt,
   I extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>,
+  ) => Z;
 export type Matcher10<
   A extends Rt,
   B extends Rt,
@@ -1596,19 +1596,19 @@ export type Matcher10<
   I extends Rt,
   J extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>,
+  ) => Z;
 export type Matcher11<
   A extends Rt,
   B extends Rt,
@@ -1622,20 +1622,20 @@ export type Matcher11<
   J extends Rt,
   K extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>
+      | Static<K>,
+  ) => Z;
 export type Matcher12<
   A extends Rt,
   B extends Rt,
@@ -1650,21 +1650,21 @@ export type Matcher12<
   K extends Rt,
   L extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>
+      | Static<K>
+      | Static<L>,
+  ) => Z;
 export type Matcher13<
   A extends Rt,
   B extends Rt,
@@ -1680,22 +1680,22 @@ export type Matcher13<
   L extends Rt,
   M extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>
+      | Static<K>
+      | Static<L>
+      | Static<M>,
+  ) => Z;
 export type Matcher14<
   A extends Rt,
   B extends Rt,
@@ -1712,23 +1712,23 @@ export type Matcher14<
   M extends Rt,
   N extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>
+      | Static<K>
+      | Static<L>
+      | Static<M>
+      | Static<N>,
+  ) => Z;
 export type Matcher15<
   A extends Rt,
   B extends Rt,
@@ -1746,24 +1746,24 @@ export type Matcher15<
   N extends Rt,
   O extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>
+      | Static<K>
+      | Static<L>
+      | Static<M>
+      | Static<N>
+      | Static<O>,
+  ) => Z;
 export type Matcher16<
   A extends Rt,
   B extends Rt,
@@ -1782,25 +1782,25 @@ export type Matcher16<
   O extends Rt,
   P extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
-    | Static<P>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>
+      | Static<K>
+      | Static<L>
+      | Static<M>
+      | Static<N>
+      | Static<O>
+      | Static<P>,
+  ) => Z;
 export type Matcher17<
   A extends Rt,
   B extends Rt,
@@ -1820,26 +1820,26 @@ export type Matcher17<
   P extends Rt,
   Q extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
-    | Static<P>
-    | Static<Q>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>
+      | Static<K>
+      | Static<L>
+      | Static<M>
+      | Static<N>
+      | Static<O>
+      | Static<P>
+      | Static<Q>,
+  ) => Z;
 export type Matcher18<
   A extends Rt,
   B extends Rt,
@@ -1860,27 +1860,27 @@ export type Matcher18<
   Q extends Rt,
   R extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
-    | Static<P>
-    | Static<Q>
-    | Static<R>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>
+      | Static<K>
+      | Static<L>
+      | Static<M>
+      | Static<N>
+      | Static<O>
+      | Static<P>
+      | Static<Q>
+      | Static<R>,
+  ) => Z;
 export type Matcher19<
   A extends Rt,
   B extends Rt,
@@ -1902,28 +1902,28 @@ export type Matcher19<
   R extends Rt,
   S extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
-    | Static<P>
-    | Static<Q>
-    | Static<R>
-    | Static<S>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>
+      | Static<K>
+      | Static<L>
+      | Static<M>
+      | Static<N>
+      | Static<O>
+      | Static<P>
+      | Static<Q>
+      | Static<R>
+      | Static<S>,
+  ) => Z;
 export type Matcher20<
   A extends Rt,
   B extends Rt,
@@ -1946,26 +1946,26 @@ export type Matcher20<
   S extends Rt,
   T extends Rt,
   Z
-> = (
-  x:
-    | Static<A>
-    | Static<B>
-    | Static<C>
-    | Static<D>
-    | Static<E>
-    | Static<F>
-    | Static<G>
-    | Static<H>
-    | Static<I>
-    | Static<J>
-    | Static<K>
-    | Static<L>
-    | Static<M>
-    | Static<N>
-    | Static<O>
-    | Static<P>
-    | Static<Q>
-    | Static<R>
-    | Static<S>
-    | Static<T>,
-) => Z;
+  > = (
+    x:
+      | Static<A>
+      | Static<B>
+      | Static<C>
+      | Static<D>
+      | Static<E>
+      | Static<F>
+      | Static<G>
+      | Static<H>
+      | Static<I>
+      | Static<J>
+      | Static<K>
+      | Static<L>
+      | Static<M>
+      | Static<N>
+      | Static<O>
+      | Static<P>
+      | Static<Q>
+      | Static<R>
+      | Static<S>
+      | Static<T>,
+  ) => Z;

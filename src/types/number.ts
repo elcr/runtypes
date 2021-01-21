@@ -1,4 +1,4 @@
-import { Runtype, create } from '../runtype';
+import { Runtype, create } from '../runtype.js';
 
 export interface Number extends Runtype<number> {
   tag: 'number';
@@ -12,8 +12,8 @@ export const Number = create<Number>(
     typeof value === 'number'
       ? { success: true, value }
       : {
-          success: false,
-          message: `Expected number, but was ${value === null ? value : typeof value}`,
-        },
+        success: false,
+        message: `Expected number, but was ${value === null ? value : typeof value}`,
+      },
   { tag: 'number' },
 );

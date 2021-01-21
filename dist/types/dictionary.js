@@ -1,5 +1,5 @@
-import { create, innerValidate } from '../runtype';
-import show from '../show';
+import { create, innerValidate } from '../runtype.js';
+import show from '../show.js';
 export function Dictionary(value, key = 'string') {
     return create((x, visited) => {
         if (x === null || x === undefined) {

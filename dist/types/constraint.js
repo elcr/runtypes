@@ -1,6 +1,6 @@
-import { create } from '../runtype';
-import { String } from './string';
-import { Unknown } from './unknown';
+import { create } from '../runtype.js';
+import { String } from './string.js';
+import { Unknown } from './unknown.js';
 export function Constraint(underlying, constraint, options) {
     return create(value => {
         const name = options && options.name;

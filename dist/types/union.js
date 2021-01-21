@@ -1,6 +1,6 @@
-import { create, innerValidate } from '../runtype';
-import show from '../show';
-import { hasKey } from '../util';
+import { create, innerValidate } from '../runtype.js';
+import show from '../show.js';
+import { hasKey } from '../util.js';
 export function Union(...alternatives) {
     const match = (...cases) => (x) => {
         for (let i = 0; i < alternatives.length; i++) {

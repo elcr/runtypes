@@ -1,5 +1,5 @@
-import { Runtype, Static } from '../runtype';
-import { Unknown } from './unknown';
+import { Runtype, Static } from '../runtype.js';
+import { Unknown } from './unknown.js';
 export declare type ConstraintCheck<A extends Runtype> = (x: Static<A>) => boolean | string;
 export interface Constraint<A extends Runtype, T extends Static<A> = Static<A>, K = unknown> extends Runtype<T> {
     tag: 'constraint';

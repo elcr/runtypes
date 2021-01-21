@@ -1,4 +1,4 @@
-import { Runtype, create } from '../runtype';
+import { Runtype, create } from '../runtype.js';
 
 /**
  * The super type of all literal types.
@@ -26,9 +26,9 @@ export function Literal<A extends LiteralBase>(valueBase: A): Literal<A> {
       value === valueBase
         ? { success: true, value }
         : {
-            success: false,
-            message: `Expected literal '${literal(valueBase)}', but was '${literal(value)}'`,
-          },
+          success: false,
+          message: `Expected literal '${literal(valueBase)}', but was '${literal(value)}'`,
+        },
     { tag: 'literal', value: valueBase },
   );
 }

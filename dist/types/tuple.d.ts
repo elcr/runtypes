@@ -1,4 +1,4 @@
-import { Runtype, Static } from '../runtype';
+import { Runtype, Static } from '../runtype.js';
 export interface Tuple0 extends Runtype {
     tag: 'tuple';
     components: [];
