@@ -1,13 +1,12 @@
 {
   "name": "runtypes",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "description": "Runtime validation for static types",
   "main": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
     "./async-contract": "./dist/asynccontract.js",
     "./contract": "./dist/contract.js",
-    "./decorator": "./dist/decorator.js",
     "./errors": "./dist/errors.js",
     "./match": "./dist/match.js",
     "./runtype": "./dist/runtype.js",
