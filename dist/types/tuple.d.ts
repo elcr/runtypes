@@ -31,15 +31,45 @@ export interface Tuple7<A extends Runtype, B extends Runtype, C extends Runtype,
     tag: 'tuple';
     components: [A, B, C, D, E, F, G];
 }
-export interface Tuple8<A extends Runtype, B extends Runtype, C extends Runtype, D extends Runtype, E extends Runtype, F extends Runtype, G extends Runtype, H extends Runtype> extends Runtype<[Static<A>, Static<B>, Static<C>, Static<D>, Static<E>, Static<F>, Static<G>, Static<H>]> {
+export interface Tuple8<A extends Runtype, B extends Runtype, C extends Runtype, D extends Runtype, E extends Runtype, F extends Runtype, G extends Runtype, H extends Runtype> extends Runtype<[
+    Static<A>,
+    Static<B>,
+    Static<C>,
+    Static<D>,
+    Static<E>,
+    Static<F>,
+    Static<G>,
+    Static<H>
+]> {
     tag: 'tuple';
     components: [A, B, C, D, E, F, G, H];
 }
-export interface Tuple9<A extends Runtype, B extends Runtype, C extends Runtype, D extends Runtype, E extends Runtype, F extends Runtype, G extends Runtype, H extends Runtype, I extends Runtype> extends Runtype<[Static<A>, Static<B>, Static<C>, Static<D>, Static<E>, Static<F>, Static<G>, Static<H>, Static<I>]> {
+export interface Tuple9<A extends Runtype, B extends Runtype, C extends Runtype, D extends Runtype, E extends Runtype, F extends Runtype, G extends Runtype, H extends Runtype, I extends Runtype> extends Runtype<[
+    Static<A>,
+    Static<B>,
+    Static<C>,
+    Static<D>,
+    Static<E>,
+    Static<F>,
+    Static<G>,
+    Static<H>,
+    Static<I>
+]> {
     tag: 'tuple';
     components: [A, B, C, D, E, F, G, H, I];
 }
-export interface Tuple10<A extends Runtype, B extends Runtype, C extends Runtype, D extends Runtype, E extends Runtype, F extends Runtype, G extends Runtype, H extends Runtype, I extends Runtype, J extends Runtype> extends Runtype<[Static<A>, Static<B>, Static<C>, Static<D>, Static<E>, Static<F>, Static<G>, Static<H>, Static<I>, Static<J>]> {
+export interface Tuple10<A extends Runtype, B extends Runtype, C extends Runtype, D extends Runtype, E extends Runtype, F extends Runtype, G extends Runtype, H extends Runtype, I extends Runtype, J extends Runtype> extends Runtype<[
+    Static<A>,
+    Static<B>,
+    Static<C>,
+    Static<D>,
+    Static<E>,
+    Static<F>,
+    Static<G>,
+    Static<H>,
+    Static<I>,
+    Static<J>
+]> {
     tag: 'tuple';
     components: [A, B, C, D, E, F, G, H, I, J];
 }

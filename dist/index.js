@@ -1,3 +1,5 @@
+export * from './reflect.js';
+export * from './result.js';
 export * from './contract.js';
 export * from './asynccontract.js';
 export * from './match.js';
@@ -21,5 +23,4 @@ export { InstanceOf } from './types/instanceof.js';
 export * from './types/lazy.js';
 export * from './types/constraint.js';
 export { Brand } from './types/brand.js';
-export * from './decorator.js';
 //# sourceMappingURL=index.js.map

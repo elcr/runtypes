@@ -29,5 +29,5 @@ export declare function check(target: any, propertyKey: PropKey, parameterIndex:
  * }
  * ```
  */
-export declare function checked(...runtypes: Runtype[]): (target: any, propertyKey: string | symbol, descriptor: PropertyDescriptor) => void;
+export declare function checked(...runtypes: Runtype[]): (target: any, propertyKey: PropKey, descriptor: PropertyDescriptor) => void;
 export {};
