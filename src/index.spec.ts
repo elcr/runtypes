@@ -5,7 +5,6 @@ import {
   Never,
   Undefined,
   Null,
-  Void,
   Boolean,
   Number,
   String,
@@ -109,7 +108,6 @@ const runtypes = {
   Undefined,
   Null,
   Empty: Record({}),
-  Void,
   Boolean,
   true: Literal(true),
   false: Literal(false),
@@ -184,8 +182,8 @@ class Foo {
 } // Should not be recognized as a Dictionary
 
 const testValues: { value: unknown; passes: RuntypeName[] }[] = [
-  { value: undefined, passes: ['Undefined', 'Void'] },
-  { value: null, passes: ['Null', 'Void'] },
+  { value: undefined, passes: ['Undefined'] },
+  { value: null, passes: ['Null'] },
   { value: true, passes: ['Boolean', 'true'] },
   { value: false, passes: ['Boolean', 'false'] },
   { value: 3, passes: ['Number', 'brandedNumber', 3, 'union1'] },
@@ -277,7 +275,6 @@ for (const { value, passes } of testValues) {
     const shouldPass: { [_ in RuntypeName]?: boolean } = {};
 
     shouldPass.Unknown = true;
-    shouldPass.Void = true;
 
     if (value !== undefined && value !== null) shouldPass.Empty = true;
 
@@ -591,10 +588,6 @@ describe('reflection', () => {
     expectLiteralField(Never, 'tag', 'never');
   });
 
-  it('void', () => {
-    expectLiteralField(Void, 'tag', 'unknown');
-  });
-
   it('boolean', () => {
     expectLiteralField(Boolean, 'tag', 'boolean');
   });
@@ -744,7 +737,6 @@ describe('change static type with Constraint', () => {
   X:
     | Unknown
     | Never
-    | Void
     | Boolean
     | Number
     | String

@@ -7,7 +7,6 @@ export * from './match.js';
 export * from './errors.js';
 export * from './types/unknown.js';
 export * from './types/never.js';
-export * from './types/void.js';
 export { Literal, Undefined, Null, LiteralBase } from './types/literal.js';
 export * from './types/boolean.js';
 export * from './types/number.js';
